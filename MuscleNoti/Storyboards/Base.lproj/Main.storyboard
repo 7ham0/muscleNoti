@@ -16,14 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0b-dO-jnQ">
-                                <rect key="frame" x="187" y="436.5" width="40.5" height="23"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mz-AS-yEY">
-                                <rect key="frame" x="167" y="474.5" width="80" height="31"/>
+                                <rect key="frame" x="167" y="498.5" width="80" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="1bU-sf-ZDp"/>
                                     <constraint firstAttribute="width" constant="80" id="QvY-4x-SYA"/>
@@ -35,8 +29,9 @@
                                     <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SFH-Gk-T8S"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After pressing on &quot;start timer&quot; button close the app and wait for notification (make shure you are on silent or vibration mode)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fI5-7D-Ilj">
-                                <rect key="frame" x="15" y="360.5" width="384" height="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fI5-7D-Ilj">
+                                <rect key="frame" x="15" y="417.5" width="384" height="61"/>
+                                <string key="text">After pressing on "Start" button, the app will close and will play a song after 5 seconds, in this time you can do what you want ))</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,19 +40,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="j0b-dO-jnQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8BO-5o-6YP"/>
-                            <constraint firstItem="j0b-dO-jnQ" firstAttribute="top" secondItem="fI5-7D-Ilj" secondAttribute="bottom" constant="15" id="DHp-Rd-ptf"/>
                             <constraint firstItem="fI5-7D-Ilj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="LwH-g7-O4X"/>
-                            <constraint firstItem="5Mz-AS-yEY" firstAttribute="top" secondItem="j0b-dO-jnQ" secondAttribute="bottom" constant="15" id="YPX-yZ-OqS"/>
+                            <constraint firstItem="5Mz-AS-yEY" firstAttribute="top" secondItem="fI5-7D-Ilj" secondAttribute="bottom" constant="20" id="RTB-Yo-V6j"/>
                             <constraint firstItem="fI5-7D-Ilj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aPL-Cs-VOx"/>
-                            <constraint firstItem="j0b-dO-jnQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cFn-gc-LHs"/>
                             <constraint firstItem="5Mz-AS-yEY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kwA-kf-5Bk"/>
                             <constraint firstAttribute="trailing" secondItem="fI5-7D-Ilj" secondAttribute="trailing" constant="15" id="mxY-w3-PJX"/>
+                            <constraint firstItem="fI5-7D-Ilj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u3x-Bf-33N"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="timeLabel" destination="j0b-dO-jnQ" id="j8S-3s-iWL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
