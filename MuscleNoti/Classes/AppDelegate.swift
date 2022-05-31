@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import AVFoundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,24 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        self.enableAudioPlayback()
         return true
     }
     
-    func enableAudioPlayback() {
-        
-        
-//        do {
-//            //set up audio session
-//            try AVAudioSession.sharedInstance().setCategory(.playback, options: [.defaultToSpeaker, .duckOthers])
-//            try AVAudioSession.sharedInstance().setActive(true)
-//
-//        }
-//        catch {
-//            print("Error: enableAudioPlayback")
-//        }
-    }
-
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
