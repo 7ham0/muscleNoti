@@ -7,6 +7,7 @@
 
 import UIKit
 import MediaPlayer
+import UserNotifications
 
 class ViewController: UIViewController {
     @IBOutlet weak var hourTextField: UITextField!
@@ -44,7 +45,24 @@ class ViewController: UIViewController {
         print("timeIntervalIs: ",timeInterval)
         
         MPVolumeView.setVolume(0.7)
+        trigerNotification(interVal: timeInterval - 1)
         MNSounds.shared.playSound(.success, atTime: timeInterval) //time is a TimeInterval after which the audio will start
+    }
+    
+    func trigerNotification(interVal: TimeInterval) {
+        let content = UNMutableNotificationContent()
+        content.title = "stop"
+        content.subtitle = "tap to stop sound"
+        content.sound = .none
+
+        // show this notification five seconds from now
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interVal, repeats: false)
+
+        // choose a random identifier
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+        // add our notification request
+        UNUserNotificationCenter.current().add(request)
     }
 }
 

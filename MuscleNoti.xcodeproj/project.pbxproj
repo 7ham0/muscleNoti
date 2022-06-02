@@ -36,6 +36,7 @@
 		5B425178284164D4000BF3BC /* MNSounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNSounds.swift; sourceTree = "<group>"; };
 		5B76A7622848B482007E4D04 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
 		5B76A7642848BAB6007E4D04 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		5B76A7662848C744007E4D04 /* MuscleNoti.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MuscleNoti.entitlements; sourceTree = "<group>"; };
 		5B7763E628465C4600E083DB /* beastie_boys_sabotage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beastie_boys_sabotage.mp3; sourceTree = "<group>"; };
 		5BABB06D28411043009B11B0 /* MuscleNoti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleNoti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BABB07028411043009B11B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 		5BABB06F28411043009B11B0 /* MuscleNoti */ = {
 			isa = PBXGroup;
 			children = (
+				5B76A7662848C744007E4D04 /* MuscleNoti.entitlements */,
 				5B76A7612848B470007E4D04 /* Extensions */,
 				5BABB08628411103009B11B0 /* Resources */,
 				5BABB08428411068009B11B0 /* Classes */,
@@ -376,6 +378,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MuscleNoti/MuscleNoti.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4L6DHP76UX;
@@ -406,6 +409,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MuscleNoti/MuscleNoti.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4L6DHP76UX;

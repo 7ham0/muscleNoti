@@ -59,4 +59,16 @@ class MNSounds {
             print(error)
         }
     }
+    
+    func stopSound() {
+        do {
+            try AVAudioSession.sharedInstance().setActive(false)
+            DispatchQueue.main.async {
+                self.player?.stop()
+            }
+        }
+        catch {
+            print(error)
+        }
+    }
 }
