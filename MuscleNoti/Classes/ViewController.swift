@@ -42,8 +42,9 @@ class ViewController: UIViewController {
         timeInterval = timeInterval + (timeInterval.addMinute(minuteIs ?? 0) ?? 0.0)
         timeInterval = timeInterval + Double((secundIs ?? 0))
         
-        print("timeIntervalIs: ",timeInterval)
+//        print("timeIntervalIs: ",timeInterval)
         
+        // Make volume 70%
         MPVolumeView.setVolume(0.7)
         
         trigerNotification(interVal: timeInterval - 1)
