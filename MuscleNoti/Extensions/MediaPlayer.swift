@@ -14,7 +14,7 @@ extension MPVolumeView {
         let volumeView = MPVolumeView()
         let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
 
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.02) {
             slider?.value = volume
         }
     }

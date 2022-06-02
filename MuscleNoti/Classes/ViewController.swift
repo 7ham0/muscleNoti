@@ -45,6 +45,7 @@ class ViewController: UIViewController {
         print("timeIntervalIs: ",timeInterval)
         
         MPVolumeView.setVolume(0.7)
+        
         trigerNotification(interVal: timeInterval - 1)
         MNSounds.shared.playSound(.success, atTime: timeInterval) //time is a TimeInterval after which the audio will start
     }
