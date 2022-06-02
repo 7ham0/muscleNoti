@@ -16,6 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vLN-LA-lqJ">
+                                <rect key="frame" x="114" y="431" width="186" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="had-DO-F7J">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8D-F4-7iN">
+                                        <rect key="frame" x="52" y="0.0" width="5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oFJ-kR-bc7">
+                                        <rect key="frame" x="77" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zei-xZ-SzD">
+                                        <rect key="frame" x="129" y="0.0" width="5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DC9-AU-hGB">
+                                        <rect key="frame" x="154" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mz-AS-yEY">
                                 <rect key="frame" x="167" y="498.5" width="80" height="31"/>
                                 <constraints>
@@ -29,9 +61,8 @@
                                     <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SFH-Gk-T8S"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fI5-7D-Ilj">
-                                <rect key="frame" x="15" y="417.5" width="384" height="61"/>
-                                <string key="text">After pressing on "Start" button, the app will close and will play a song after 5 seconds, in this time you can do what you want ))</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification will play after the time you enter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBc-SK-eW0">
+                                <rect key="frame" x="15" y="370.5" width="384" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,18 +71,25 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fI5-7D-Ilj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="LwH-g7-O4X"/>
-                            <constraint firstItem="5Mz-AS-yEY" firstAttribute="top" secondItem="fI5-7D-Ilj" secondAttribute="bottom" constant="20" id="RTB-Yo-V6j"/>
-                            <constraint firstItem="fI5-7D-Ilj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aPL-Cs-VOx"/>
+                            <constraint firstItem="vLN-LA-lqJ" firstAttribute="top" secondItem="LBc-SK-eW0" secondAttribute="bottom" constant="40" id="5L0-ix-BTU"/>
+                            <constraint firstItem="LBc-SK-eW0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="6mN-s0-5Is"/>
+                            <constraint firstItem="vLN-LA-lqJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IXe-YZ-Rqu"/>
+                            <constraint firstItem="vLN-LA-lqJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ky3-NG-I7y"/>
+                            <constraint firstItem="LBc-SK-eW0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ceI-m4-cl0"/>
+                            <constraint firstItem="5Mz-AS-yEY" firstAttribute="top" secondItem="vLN-LA-lqJ" secondAttribute="bottom" constant="33.5" id="gW1-ba-8pE"/>
+                            <constraint firstAttribute="trailing" secondItem="LBc-SK-eW0" secondAttribute="trailing" constant="15" id="kFf-bF-5iF"/>
                             <constraint firstItem="5Mz-AS-yEY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kwA-kf-5Bk"/>
-                            <constraint firstAttribute="trailing" secondItem="fI5-7D-Ilj" secondAttribute="trailing" constant="15" id="mxY-w3-PJX"/>
-                            <constraint firstItem="fI5-7D-Ilj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u3x-Bf-33N"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hourTextField" destination="had-DO-F7J" id="UUG-Ka-BJY"/>
+                        <outlet property="minuteTextField" destination="oFJ-kR-bc7" id="60X-7q-iCd"/>
+                        <outlet property="secundTextField" destination="DC9-AU-hGB" id="ZIy-vu-ftC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="98"/>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>

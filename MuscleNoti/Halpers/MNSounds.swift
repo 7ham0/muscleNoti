@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 
 
@@ -49,6 +50,8 @@ class MNSounds {
             )
             
             DispatchQueue.main.async {
+                self.player?.prepareToPlay()
+                self.player?.volume = 0.7
                 self.player?.play(atTime: (self.player?.deviceCurrentTime ?? 0.0) + atTime)
             }
         }
