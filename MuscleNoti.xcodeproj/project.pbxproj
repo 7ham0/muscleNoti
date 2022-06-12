@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B02C8FA2850D3ED00C8C90F /* beastie_boys_sabotage_noti.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B02C8F92850D3ED00C8C90F /* beastie_boys_sabotage_noti.mp3 */; };
 		5B425179284164D4000BF3BC /* MNSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B425178284164D4000BF3BC /* MNSounds.swift */; };
 		5B76A7632848B482007E4D04 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A7622848B482007E4D04 /* MediaPlayer.swift */; };
 		5B76A7652848BAB6007E4D04 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A7642848BAB6007E4D04 /* Date.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B02C8F92850D3ED00C8C90F /* beastie_boys_sabotage_noti.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beastie_boys_sabotage_noti.mp3; sourceTree = "<group>"; };
 		5B425178284164D4000BF3BC /* MNSounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNSounds.swift; sourceTree = "<group>"; };
 		5B76A7622848B482007E4D04 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
 		5B76A7642848BAB6007E4D04 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				5B76A7662848C744007E4D04 /* MuscleNoti.entitlements */,
+				5B02C8F92850D3ED00C8C90F /* beastie_boys_sabotage_noti.mp3 */,
 				5B76A7612848B470007E4D04 /* Extensions */,
 				5BABB08628411103009B11B0 /* Resources */,
 				5BABB08428411068009B11B0 /* Classes */,
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B7763E728465C4600E083DB /* beastie_boys_sabotage.mp3 in Resources */,
+				5B02C8FA2850D3ED00C8C90F /* beastie_boys_sabotage_noti.mp3 in Resources */,
 				5BABB07D28411043009B11B0 /* LaunchScreen.storyboard in Resources */,
 				5BABB07A28411043009B11B0 /* Assets.xcassets in Resources */,
 				5BABB07828411043009B11B0 /* Main.storyboard in Resources */,
@@ -380,7 +384,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MuscleNoti/MuscleNoti.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 4L6DHP76UX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MuscleNoti/Supportive Files/Info.plist";
@@ -411,7 +415,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MuscleNoti/MuscleNoti.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 4L6DHP76UX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MuscleNoti/Supportive Files/Info.plist";
