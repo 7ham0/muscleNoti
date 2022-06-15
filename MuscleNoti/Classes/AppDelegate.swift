@@ -41,8 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let notificationTitle = response.notification.request.content.title
         
-        if notificationTitle == "stop" {
+        if notificationTitle == "Alarm is playing" {
             MNSounds.shared.stopSound()
+            MNPrefs.shared.changeAlarmStatus(isAvtive: false)
         }
     }
 

@@ -18,6 +18,8 @@
 		5BABB07828411043009B11B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB07628411043009B11B0 /* Main.storyboard */; };
 		5BABB07A28411043009B11B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB07928411043009B11B0 /* Assets.xcassets */; };
 		5BABB07D28411043009B11B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB07B28411043009B11B0 /* LaunchScreen.storyboard */; };
+		5BD907372859C38C0013DFA3 /* 1-minute-of-silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BD907362859C38C0013DFA3 /* 1-minute-of-silence.mp3 */; };
+		5BD907392859C5D60013DFA3 /* MNPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD907382859C5D60013DFA3 /* MNPrefs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +50,8 @@
 		5BABB07928411043009B11B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BABB07C28411043009B11B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BABB07E28411043009B11B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BD907362859C38C0013DFA3 /* 1-minute-of-silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1-minute-of-silence.mp3"; sourceTree = "<group>"; };
+		5BD907382859C5D60013DFA3 /* MNPrefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNPrefs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				5B7763E628465C4600E083DB /* beastie_boys_sabotage.mp3 */,
+				5BD907362859C38C0013DFA3 /* 1-minute-of-silence.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -73,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				5B425178284164D4000BF3BC /* MNSounds.swift */,
+				5BD907382859C5D60013DFA3 /* MNPrefs.swift */,
 			);
 			path = Halpers;
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 				5B7763E728465C4600E083DB /* beastie_boys_sabotage.mp3 in Resources */,
 				5B02C8FA2850D3ED00C8C90F /* beastie_boys_sabotage_noti.mp3 in Resources */,
 				5BABB07D28411043009B11B0 /* LaunchScreen.storyboard in Resources */,
+				5BD907372859C38C0013DFA3 /* 1-minute-of-silence.mp3 in Resources */,
 				5BABB07A28411043009B11B0 /* Assets.xcassets in Resources */,
 				5BABB07828411043009B11B0 /* Main.storyboard in Resources */,
 			);
@@ -230,6 +237,7 @@
 				5B425179284164D4000BF3BC /* MNSounds.swift in Sources */,
 				5B76A7652848BAB6007E4D04 /* Date.swift in Sources */,
 				5BABB07528411043009B11B0 /* ViewController.swift in Sources */,
+				5BD907392859C5D60013DFA3 /* MNPrefs.swift in Sources */,
 				5BABB07128411043009B11B0 /* AppDelegate.swift in Sources */,
 				5BABB07328411043009B11B0 /* SceneDelegate.swift in Sources */,
 				5B76A7632848B482007E4D04 /* MediaPlayer.swift in Sources */,
@@ -379,7 +387,6 @@
 		5BABB08228411043009B11B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MuscleNoti/MuscleNoti.entitlements;
@@ -410,7 +417,6 @@
 		5BABB08328411043009B11B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MuscleNoti/MuscleNoti.entitlements;

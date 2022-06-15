@@ -24,6 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+        if MNPrefs.shared.getAlarmStatus() == true {
+            self.trigerOpenAppNotification()
+        }
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
@@ -45,6 +48,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        
+        
+        
+    }
+    
+    
+    func trigerOpenAppNotification() {
+        let content = UNMutableNotificationContent()
+        
+        content.title = "Please open app"
+        content.subtitle = "It needs to be opend for playing sound"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+
+        // choose a random identifier
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+        // add our notification request
+        UNUserNotificationCenter.current().add(request)
     }
 
 

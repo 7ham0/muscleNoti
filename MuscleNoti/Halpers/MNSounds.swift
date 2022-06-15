@@ -13,11 +13,14 @@ import MediaPlayer
 
 enum SoundType {
     case success
+    case silent
     
     var source: String {
         switch self {
         case .success:
             return "beastie_boys_sabotage"
+        case .silent:
+            return "1-minute-of-silence"
         }
     }
 }
@@ -27,7 +30,7 @@ class MNSounds {
     
     private var player: AVAudioPlayer?
     
-    func playSound(_ type: SoundType, atTime: TimeInterval) {
+    func playSound(_ type: SoundType, atTime: TimeInterval = 0) {
         guard let soundFileURL = Bundle.main.url(
             forResource: type.source, withExtension: "mp3"
         ) else {
@@ -52,6 +55,7 @@ class MNSounds {
             DispatchQueue.main.async {
                 self.player?.prepareToPlay()
                 self.player?.volume = 0.7
+                self.player?.numberOfLoops = -1
                 self.player?.play(atTime: (self.player?.deviceCurrentTime ?? 0.0) + atTime)
             }
         }
