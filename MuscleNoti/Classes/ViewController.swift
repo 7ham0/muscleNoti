@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var minuteTextField: UITextField!
     @IBOutlet weak var secundTextField: UITextField!
     
-    var timer = Timer()
+    var deviceTimeMonitor = Timer()
     var choosenDate: Date?
+    var deviceDate = Date()
     var components = DateComponents()
+    var musicTimer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startAlarm(_ sender: AnyObject) {
-        timer.invalidate()
+        deviceTimeMonitor.invalidate()
         self.playSound()
         UIControl().sendAction(#selector(NSXPCConnection.suspend),
                                to: UIApplication.shared, for: nil)
@@ -48,9 +50,9 @@ class ViewController: UIViewController {
         let minuteIs = Int(self.minuteTextField.text ?? "0")
         let secundIs = Int(self.secundTextField.text ?? "0")
         
-        self.components.year = Date().get(.year)
-        self.components.day = Date().get(.day)
-        self.components.month = Date().get(.month)
+        self.components.year = deviceDate.get(.year)
+        self.components.day = deviceDate.get(.day)
+        self.components.month = deviceDate.get(.month)
         self.components.hour = hourIs
         self.components.minute = minuteIs
         self.components.second = secundIs
@@ -65,7 +67,7 @@ class ViewController: UIViewController {
         
         
         // - timer for music
-        let musicTimer = Timer(fireAt: choosenDate ?? Date(), interval: 1.0, target: self, selector: #selector(playCustomSound), userInfo: nil, repeats: false)
+        musicTimer = Timer(fireAt: choosenDate ?? Date(), interval: 1.0, target: self, selector: #selector(playCustomSound), userInfo: nil, repeats: false)
         RunLoop.main.add(musicTimer, forMode: .common)
         
         // trigger noti in date
@@ -78,19 +80,29 @@ class ViewController: UIViewController {
         UNUserNotificationCenter.current().add(request)
         
         // timer for chack if device time has been changed
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(isDeviceTimeChanged), userInfo: nil, repeats: true)
+        deviceTimeMonitor = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(isDeviceTimeChanged), userInfo: nil, repeats: true)
     }
     
     // - chack for device time change
     @objc func isDeviceTimeChanged() {
-        if Date().timeIntervalSinceReferenceDate >= choosenDate?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate {
+        self.deviceDate = Date()
+        if deviceDate.timeIntervalSinceReferenceDate >= choosenDate?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate && deviceDate.timeIntervalSinceReferenceDate <= ((choosenDate?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate) + 1) {
             self.playCustomSound()
+        }
+        
+        if deviceDate.timeIntervalSinceReferenceDate > ((choosenDate?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate) + 1.5) {
+            
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            deviceTimeMonitor.invalidate()
+            musicTimer.invalidate()
+            
         }
     }
     
     @objc func playCustomSound() {
         // Make volume 70%
-        timer.invalidate()
+        deviceTimeMonitor.invalidate()
+        musicTimer.invalidate()
         MPVolumeView.setVolume(0.7)
         MNSounds.shared.playSound(.success)
     }

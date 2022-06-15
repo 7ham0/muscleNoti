@@ -22,7 +22,7 @@ class MNPrefs {
   
     private let alarmIsActive = "alarmIsActive"
     
-    func getAlarmStatus() -> Bool {
+    func alarmIsRunning() -> Bool {
         return defaults.bool(forKey: alarmIsActive)
     }
     
