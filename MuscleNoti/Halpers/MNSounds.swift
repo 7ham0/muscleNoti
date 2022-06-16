@@ -64,6 +64,30 @@ class MNSounds {
         }
     }
     
+    func playWithoutSound() {
+        do {
+            // Configure and activate the AVAudioSession
+            try AVAudioSession.sharedInstance().setCategory(
+                AVAudioSession.Category.playback,
+                options: [AVAudioSession.CategoryOptions.duckOthers,
+                AVAudioSession.CategoryOptions.mixWithOthers]
+            )
+            
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            // Play a sound
+            DispatchQueue.main.async {
+                self.player?.prepareToPlay()
+                self.player?.volume = 0.7
+                self.player?.numberOfLoops = -1
+                self.player?.play()
+            }
+        }
+        catch {
+            print(error)
+        }
+    }
+    
     func stopSound() {
         do {
             try AVAudioSession.sharedInstance().setActive(false)
