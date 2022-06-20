@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var deviceDate = Date()
     var components = DateComponents()
     var musicTimer = Timer()
+    var musicCanPlay = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +53,7 @@ class ViewController: UIViewController {
         print("choosenDate2: \(choosenDate ?? Date())")
         
         // timer for chack if device time has been changed
-        deviceTimeMonitor = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(isDeviceTimeChanged), userInfo: nil, repeats: true)
+        deviceTimeMonitor = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(isDeviceTimeChanged), userInfo: nil, repeats: true)
     }
     
     func triggerMusicAndNotification() {
@@ -71,13 +72,21 @@ class ViewController: UIViewController {
     // - chack for device time change
     @objc func isDeviceTimeChanged() {
         self.deviceDate = Date()
-        if deviceDate.timeIntervalSinceReferenceDate >= choosenDate?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate && deviceDate.timeIntervalSinceReferenceDate <= ((choosenDate?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate) + 1) {
+        if deviceDate.timeIntervalSinceReferenceDate <= (choosenDate?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate) {
             
-            self.triggerMusicAndNotification()
+            self.musicCanPlay = true
             
         }
         
-        if deviceDate.timeIntervalSinceReferenceDate > ((choosenDate?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate) + 1.5) {
+        if musicCanPlay == true && deviceDate.timeIntervalSinceReferenceDate >= choosenDate?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate && deviceDate.timeIntervalSinceReferenceDate <= ((choosenDate?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate) + 2) {
+            
+            self.triggerMusicAndNotification()
+            self.musicCanPlay = false
+        }
+        
+        if deviceDate.timeIntervalSinceReferenceDate > ((choosenDate?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate) + 2.5) {
+            
+            self.musicCanPlay = false
             
         }
     }

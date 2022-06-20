@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B02C8FA2850D3ED00C8C90F /* beastie_boys_sabotage_noti.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B02C8F92850D3ED00C8C90F /* beastie_boys_sabotage_noti.mp3 */; };
 		5B425179284164D4000BF3BC /* MNSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B425178284164D4000BF3BC /* MNSounds.swift */; };
+		5B4DCDE0285B7BA9007E370A /* 1-minute-of-silence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B4DCDDF285B7BA9007E370A /* 1-minute-of-silence.wav */; };
 		5B76A7632848B482007E4D04 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A7622848B482007E4D04 /* MediaPlayer.swift */; };
 		5B76A7652848BAB6007E4D04 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A7642848BAB6007E4D04 /* Date.swift */; };
 		5B7763E728465C4600E083DB /* beastie_boys_sabotage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B7763E628465C4600E083DB /* beastie_boys_sabotage.mp3 */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		5B02C8F92850D3ED00C8C90F /* beastie_boys_sabotage_noti.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beastie_boys_sabotage_noti.mp3; sourceTree = "<group>"; };
 		5B425178284164D4000BF3BC /* MNSounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNSounds.swift; sourceTree = "<group>"; };
+		5B4DCDDF285B7BA9007E370A /* 1-minute-of-silence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "1-minute-of-silence.wav"; sourceTree = "<group>"; };
 		5B76A7622848B482007E4D04 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
 		5B76A7642848BAB6007E4D04 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		5B76A7662848C744007E4D04 /* MuscleNoti.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MuscleNoti.entitlements; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				5B7763E628465C4600E083DB /* beastie_boys_sabotage.mp3 */,
 				5BD907362859C38C0013DFA3 /* 1-minute-of-silence.mp3 */,
+				5B4DCDDF285B7BA9007E370A /* 1-minute-of-silence.wav */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				5B7763E728465C4600E083DB /* beastie_boys_sabotage.mp3 in Resources */,
 				5B02C8FA2850D3ED00C8C90F /* beastie_boys_sabotage_noti.mp3 in Resources */,
+				5B4DCDE0285B7BA9007E370A /* 1-minute-of-silence.wav in Resources */,
 				5BABB07D28411043009B11B0 /* LaunchScreen.storyboard in Resources */,
 				5BD907372859C38C0013DFA3 /* 1-minute-of-silence.mp3 in Resources */,
 				5BABB07A28411043009B11B0 /* Assets.xcassets in Resources */,
@@ -391,7 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MuscleNoti/MuscleNoti.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 4L6DHP76UX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MuscleNoti/Supportive Files/Info.plist";
@@ -421,7 +425,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MuscleNoti/MuscleNoti.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 4L6DHP76UX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MuscleNoti/Supportive Files/Info.plist";

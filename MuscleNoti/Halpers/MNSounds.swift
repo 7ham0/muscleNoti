@@ -65,25 +65,49 @@ class MNSounds {
     }
     
     func playWithoutSound() {
-        do {
-            // Configure and activate the AVAudioSession
-            try AVAudioSession.sharedInstance().setCategory(
-                AVAudioSession.Category.playback,
-                options: [AVAudioSession.CategoryOptions.duckOthers,
-                AVAudioSession.CategoryOptions.mixWithOthers]
-            )
-            
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            // Play a sound
-            DispatchQueue.main.async {
-                self.player?.prepareToPlay()
-                self.player?.volume = 0.7
-                self.player?.numberOfLoops = -1
-                self.player?.play()
-            }
+        guard let soundFileURL = Bundle.main.url(
+            forResource: "1-minute-of-silence", withExtension: "wav"
+        ) else {
+            return
         }
-        catch {
+        
+        var audioFile = AVAudioFile()
+        
+        do {
+            audioFile = try AVAudioFile(forReading: soundFileURL)
+        } catch {
+            print(error)
+        }
+        
+        let audioFormat = audioFile.processingFormat
+        let audioEngine = AVAudioEngine()
+        let playerNode = AVAudioPlayerNode()
+
+        // Attach the player node to the audio engine.
+        audioEngine.attach(playerNode)
+
+        // Connect the player node to the output node.
+        audioEngine.connect(playerNode,
+                            to: audioEngine.outputNode,
+                            format: audioFormat )
+        
+        
+        playerNode.scheduleFile(audioFile,
+                                at: nil,
+                                completionCallbackType: .dataPlayedBack) { _ in
+            /* Handle any work that's necessary after playback. */
+            
+            
+        }
+        
+        do {
+            try audioEngine.start()
+//            playerNode.play()
+            
+            print("audioEngine is running: \(audioEngine.isRunning)")
+            print("playerNode is playing: \(playerNode.isPlaying)")
+        } catch {
+            /* Handle the error. */
             print(error)
         }
     }
